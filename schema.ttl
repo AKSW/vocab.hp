@@ -16,7 +16,7 @@
   foaf:maker <http://aksw.org/NormanRadtke>, <http://aksw.org/AndreasNareike>, <http://aksw.org/NatanaelArndt> ;
   doap:maintainer <http://aksw.org/NormanRadtke>;
   doap:homepage <http://www.pfarrerbuch.de>;
-  cc:attributionName "AKSW & Universitätsbibliothek Leipzig" ;
+  cc:attributionName "AKSW" ;
   vann:changes <https://github.com/ERM-HD/vocab.hp/commits/master/schema.ttl>;
   vann:preferredNamespacePrefix "hp";
   vann:preferredNamespaceUri "http://http://purl.org/vok/hp/";
