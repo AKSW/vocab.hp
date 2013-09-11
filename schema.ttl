@@ -35,7 +35,7 @@ foaf:Person rdf:type owl:Class ;
 hp:School rdf:type owl:Class ;
     rdfs:label "Schule"@de .
 
-hp:Postion rdf:type owl:Class ;
+hp:Position rdf:type owl:Class ;
     rdfs:label "Stelle"@de .
 
 hp:Event rdf:type owl:Class ;
