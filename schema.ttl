@@ -144,7 +144,13 @@ hp:end rdf:type rdf:Property ;
     rdfs:label "Ende"@de .
 
 hp:hasPosition rdf:type rdf:Property ;
-    rdfs:label "hatte Stelle"@de .
+    rdfs:label "Pfarrstellen"@de .
+
+hp:father rdf:type rdf:Property ;
+    rdfs:label "Vater"@de .
+
+hp:mother rdf:type rdf:Property ;
+    rdfs:label "Mutter"@de .
 
 hp:attendedSchool rdf:type rdf:Property ;
     rdfs:label "besuchte Schule"@de .
