@@ -65,6 +65,9 @@ hp:gender rdf:type rdf:Property ;
 hp:positionDesignation rdf:type rdf:Property ;
     rdfs:label "Stellenbezeichnung"@de .
 
+hp:place rdf:type rdf:Property ;
+    rdfs:label "Ort"@de .
+
 hp:burialPlace rdf:type rdf:Property ;
     rdfs:label "Begräbnisort"@de .
 
