@@ -1,5 +1,5 @@
-@base <http://purl.org/vok/hp/> .
-@prefix hp: <http://purl.org/vok/hp/> .
+@base <http://purl.org/voc/hp/> .
+@prefix hp: <http://purl.org/voc/hp/> .
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dct: <http://purl.org/dc/terms/> .
@@ -19,7 +19,7 @@
   cc:attributionName "AKSW" ;
   vann:changes <https://github.com/ERM-HD/vocab.hp/commits/master/schema.ttl>;
   vann:preferredNamespacePrefix "hp";
-  vann:preferredNamespaceUri "http://purl.org/vok/hp/";
+  vann:preferredNamespaceUri "http://purl.org/voc/hp/";
   rdfs:label "Vocabulary for Historical Persons";
   rdfs:isDefinedBy <> .
 
