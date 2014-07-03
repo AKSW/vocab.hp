@@ -32,6 +32,11 @@ hp:Place rdf:type owl:Class ;
 foaf:Person rdf:type owl:Class ;
     rdfs:label "Person"@de .
 
+hp:Pastor rdf:type owl:Class ;
+    rdfs:subClassOf foaf:Person ;
+    rdfs:label "Pfarrer"@de ;
+    rdfs:label "klerikus"@hu .
+
 hp:School rdf:type owl:Class ;
     rdfs:label "Schule"@de ;
     rdfs:label "iskola"@hu .
@@ -57,7 +62,7 @@ hp:nameVariant rdf:type rdf:Property ;
     rdfs:label "Namesvarianten"@de .
 
 hp:isPastor rdf:type rdf:Property ;
-    rdfs:label "Pfarrer"@de ;
+    rdfs:label "ist Pfarrer"@de ;
     rdfs:label "Lelkész"@hu .
 
 hp:parent rdf:type rdf:Property ;
