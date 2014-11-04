@@ -76,28 +76,35 @@ hp:positionDesignation rdf:type rdf:Property ;
     rdfs:label "Stellenbezeichnung"@de .
 
 hp:place rdf:type rdf:Property ;
+    rdfs:range hp:Place ;
     rdfs:label "Ort"@de .
 
 hp:burialPlace rdf:type rdf:Property ;
+    rdfs:range hp:Place ;
     rdfs:label "Begräbnisort"@de .
 
 hp:placeOfRetirement rdf:type rdf:Property ;
+    rdfs:range hp:Place ;
     rdfs:label "Emeritierungsorg"@de ;
     rdfs:label "nyugalomba vonulás helye"@hu .
 
 hp:placeOfOrdination rdf:type rdf:Property ;
+    rdfs:range hp:Place ;
     rdfs:label "Ordinationsort"@de ;
     rdfs:label "ordináció helye"@hu .
 
 hp:placeOfBabtism rdf:type rdf:Property ;
+    rdfs:range hp:Place ;
     rdfs:label "Taufort"@de ;
     rdfs:label "keresztelés helye"@hu .
 
 hp:placeOfDeath rdf:type rdf:Property ;
+    rdfs:range hp:Place ;
     rdfs:label "Sterbeort"@de ;
     rdfs:label "halál helye"@hu .
 
 hp:birthPlace rdf:type rdf:Property ;
+    rdfs:range hp:Place ;
     rdfs:label "Geburtsort"@de ;
     rdfs:label "születési hely"@hu .
 
@@ -125,7 +132,26 @@ hp:dayOfFuneral rdf:type rdf:Property ;
     rdfs:label "Begräbnistag"@de .
 
 hp:nameOfPlace rdf:type rdf:Property ;
+    rdfs:sublPropertyOf rdfs:label ;
     rdfs:label "Ortsname"@de .
+
+hp:geographicalLocation a rdf:Property ;
+    rdfs:label "geographische Lage"@de , "geographical Location"@en ;
+    rdfs:comment "The geographical location of a place related to some other place. This can be used for denoting the location of historic villages where exact position information are not known but a relation to some well known place exists. E.g. “North of Leipzig”."@en .
+
+hp:country a rdf:Property ;
+    rdfs:label "Land"@de , "Country"@en .
+
+hp:currentName rdfs:sublPropertyOf skos:altLabel .
+
+hp:currentDistrict rdfs:sublPropertyOf skos:altLabel .
+
+hp:currentName rdfs:sublPropertyOf skos:altLabel .
+
+hp:komitat1913 a rdf:Property ;
+    rdfs:label "Komitat 1913"@de .
+
+hp:germanName rdfs:sublPropertyOf skos:altLabel .
 
 hp:district rdf:type rdf:Property ;
     rdfs:label "Kreis"@de .
@@ -183,3 +209,4 @@ hp:mother rdf:type rdf:Property ;
 
 hp:attendedSchool rdf:type rdf:Property ;
     rdfs:label "besuchte Schule(n)"@de .
+
