@@ -23,8 +23,9 @@
   rdfs:label "Vocabulary for Historical Persons";
   rdfs:isDefinedBy <> .
 
-
+#
 # Classes
+#
 
 hp:Place rdf:type owl:Class ;
     rdfs:label "Ort"@de .
@@ -47,6 +48,10 @@ hp:Position rdf:type owl:Class ;
 hp:Event rdf:type owl:Class ;
     rdfs:label "Ereignis"@de .
 
+#
+# Properties
+#
+
 foaf:name rdf:type rdf:Property ;
     rdfs:label "Name"@de .
 
@@ -67,6 +72,16 @@ hp:isPastor rdf:type rdf:Property ;
 
 hp:parent rdf:type rdf:Property ;
     rdfs:label "Eltern"@de .
+
+hp:father rdf:type rdf:Property ;
+    rdfs:subPropertyOf hp:parent ;
+    rdfs:label "Vater"@de ;
+    rdfs:label "apa"@hu .
+
+hp:mother rdf:type rdf:Property ;
+    rdfs:subPropertyOf hp:parent ;
+    rdfs:label "Mutter"@de ;
+    rdfs:label "anya"@hu .
 
 hp:gender rdf:type rdf:Property ;
     rdfs:label "Geschlecht"@de ;
@@ -132,7 +147,7 @@ hp:dayOfFuneral rdf:type rdf:Property ;
     rdfs:label "Begräbnistag"@de .
 
 hp:nameOfPlace rdf:type rdf:Property ;
-    rdfs:sublPropertyOf rdfs:label ;
+    rdfs:subPropertyOf rdfs:label ;
     rdfs:label "Ortsname"@de .
 
 hp:geographicalLocation a rdf:Property ;
@@ -145,8 +160,6 @@ hp:country a rdf:Property ;
 hp:currentName rdfs:sublPropertyOf skos:altLabel .
 
 hp:currentDistrict rdfs:sublPropertyOf skos:altLabel .
-
-hp:currentName rdfs:sublPropertyOf skos:altLabel .
 
 hp:komitat1913 a rdf:Property ;
     rdfs:label "Komitat 1913"@de .
@@ -198,14 +211,6 @@ hp:child rdf:type rdf:Property ;
 hp:hasPosition rdf:type rdf:Property ;
     rdfs:label "Pfarrstelle(n)"@de ;
     rdfs:label "lelkészi állás"@hu .
-
-hp:father rdf:type rdf:Property ;
-    rdfs:label "Vater"@de ;
-    rdfs:label "apa"@hu .
-
-hp:mother rdf:type rdf:Property ;
-    rdfs:label "Mutter"@de ;
-    rdfs:label "anya"@hu .
 
 hp:attendedSchool rdf:type rdf:Property ;
     rdfs:label "besuchte Schule(n)"@de .
