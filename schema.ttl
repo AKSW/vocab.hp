@@ -63,6 +63,10 @@ foaf:firstName rdf:type rdf:Property ;
     rdfs:label "Vorname"@de ;
     rdfs:label "keresztnév"@hu .
 
+foaf:gender rdf:type rdf:Property ;
+    rdfs:label "Geschlecht"@de ;
+    rdfs:label "nem"@hu .
+
 hp:nameVariant rdf:type rdf:Property ;
     rdfs:label "Namesvarianten"@de .
 
@@ -82,10 +86,6 @@ hp:mother rdf:type rdf:Property ;
     rdfs:subPropertyOf hp:parent ;
     rdfs:label "Mutter"@de ;
     rdfs:label "anya"@hu .
-
-hp:gender rdf:type rdf:Property ;
-    rdfs:label "Geschlecht"@de ;
-    rdfs:label "nem"@hu .
 
 hp:positionDesignation rdf:type rdf:Property ;
     rdfs:label "Stellenbezeichnung"@de .
@@ -196,6 +196,14 @@ hp:ort rdf:type rdf:Property ;
 rdfs:comment rdf:type rdf:Property ;
     rdfs:label "Bemerkung"@de ;
     rdfs:label "megjegyzések"@hu .
+
+hp:editorsComment rdf:type rdf:Property ;
+    rdfs:label "Bearbeitungs Kommentar"@de .
+
+hp:source rdf:type rdf:Property ;
+    rdfs:comment "The described resource may be derived from the related resource in whole or in part." ;
+    skos:note "In contrast to dc:source resp. dct:source this term is intended to be used with literal values." ;
+    rdfs:label "Quellen und Literatur"@de .
 
 hp:start rdf:type rdf:Property ;
     rdfs:label "Begin"@de ;
