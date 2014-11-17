@@ -190,9 +190,6 @@ hp:nameOfSchool a rdf:Property ;
 hp:graduation a rdf:Property ;
     rdfs:label "Abschluss"@de .
 
-hp:ort a rdf:Property ;
-    rdfs:label "Abschluss"@de .
-
 rdfs:comment a rdf:Property ;
     rdfs:label "Bemerkung"@de ;
     rdfs:label "megjegyzések"@hu .
