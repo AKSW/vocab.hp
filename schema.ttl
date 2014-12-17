@@ -146,6 +146,10 @@ hp:dateOfDeath a rdf:Property ;
 hp:dayOfFuneral a rdf:Property ;
     rdfs:label "Begräbnistag"@de .
 
+hp:ordinator a rdf:Property ;
+    rdfs:label "Ordinator"@de ;
+    rdfs:comment "The person who did the ordination of the new pastor" .
+
 hp:nameOfPlace a rdf:Property ;
     rdfs:subPropertyOf rdfs:label ;
     rdfs:label "Ortsname"@de .
