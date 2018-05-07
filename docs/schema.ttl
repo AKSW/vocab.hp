@@ -1,0 +1,226 @@
+@base <http://purl.org/voc/hp/> .
+@prefix hp: <http://purl.org/voc/hp/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix doap: <http://usefulinc.com/ns/doap#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<> a owl:Ontology;
+  foaf:maker <http://aksw.org/NormanRadtke>, <http://aksw.org/AndreasNareike>, <http://aksw.org/NatanaelArndt> ;
+  doap:maintainer <http://aksw.org/NormanRadtke>;
+  doap:homepage <http://www.pfarrerbuch.de>;
+  cc:attributionName "AKSW" ;
+  vann:changes <https://github.com/ERM-HD/vocab.hp/commits/master/schema.ttl>;
+  vann:preferredNamespacePrefix "hp";
+  vann:preferredNamespaceUri "http://purl.org/voc/hp/";
+  rdfs:label "Vocabulary for Historical Persons";
+  rdfs:isDefinedBy <> .
+
+#
+# Classes
+#
+
+hp:Place a owl:Class ;
+    rdfs:label "Ort"@de .
+
+foaf:Person a owl:Class ;
+    rdfs:label "Person"@de .
+
+hp:Pastor a owl:Class ;
+    rdfs:subClassOf foaf:Person ;
+    rdfs:label "Pfarrer"@de ;
+    rdfs:label "klerikus"@hu .
+
+hp:School a owl:Class ;
+    rdfs:label "Schule"@de ;
+    rdfs:label "iskola"@hu .
+
+hp:Position a owl:Class ;
+    rdfs:label "Stelle"@de .
+
+hp:Event a owl:Class ;
+    rdfs:label "Ereignis"@de .
+
+#
+# Properties
+#
+
+foaf:name a rdf:Property ;
+    rdfs:label "Name"@de .
+
+foaf:lastName a rdf:Property ;
+    rdfs:label "Nachname"@de ;
+    rdfs:label "vezetéknév"@hu .
+
+foaf:firstName a rdf:Property ;
+    rdfs:label "Vorname"@de ;
+    rdfs:label "keresztnév"@hu .
+
+foaf:gender a rdf:Property ;
+    rdfs:label "Geschlecht"@de ;
+    rdfs:label "nem"@hu .
+
+hp:nameVariant a rdf:Property ;
+    rdfs:label "Namesvarianten"@de .
+
+hp:isPastor a rdf:Property ;
+    rdfs:label "ist Pfarrer"@de ;
+    rdfs:label "Lelkész"@hu .
+
+hp:parent a rdf:Property ;
+    rdfs:label "Eltern"@de .
+
+hp:father a rdf:Property ;
+    rdfs:subPropertyOf hp:parent ;
+    rdfs:label "Vater"@de ;
+    rdfs:label "apa"@hu .
+
+hp:mother a rdf:Property ;
+    rdfs:subPropertyOf hp:parent ;
+    rdfs:label "Mutter"@de ;
+    rdfs:label "anya"@hu .
+
+hp:positionDesignation a rdf:Property ;
+    rdfs:label "Stellenbezeichnung"@de .
+
+hp:place a rdf:Property ;
+    rdfs:range hp:Place ;
+    rdfs:label "Ort"@de .
+
+hp:burialPlace a rdf:Property ;
+    rdfs:range hp:Place ;
+    rdfs:label "Begräbnisort"@de .
+
+hp:placeOfRetirement a rdf:Property ;
+    rdfs:range hp:Place ;
+    rdfs:label "Emeritierungsorg"@de ;
+    rdfs:label "nyugalomba vonulás helye"@hu .
+
+hp:placeOfOrdination a rdf:Property ;
+    rdfs:range hp:Place ;
+    rdfs:label "Ordinationsort"@de ;
+    rdfs:label "ordináció helye"@hu .
+
+hp:placeOfBabtism a rdf:Property ;
+    rdfs:range hp:Place ;
+    rdfs:label "Taufort"@de ;
+    rdfs:label "keresztelés helye"@hu .
+
+hp:placeOfDeath a rdf:Property ;
+    rdfs:range hp:Place ;
+    rdfs:label "Sterbeort"@de ;
+    rdfs:label "halál helye"@hu .
+
+hp:birthPlace a rdf:Property ;
+    rdfs:range hp:Place ;
+    rdfs:label "Geburtsort"@de ;
+    rdfs:label "születési hely"@hu .
+
+hp:birthDate a rdf:Property ;
+    rdfs:label "Geburtsdatum"@de ;
+    rdfs:label "születési idő"@hu .
+
+hp:dayOfBabtism a rdf:Property ;
+    rdfs:label "Taufdatum"@de ;
+    rdfs:label "keresztelés ideje"@hu .
+
+hp:dateOfOrdination a rdf:Property ;
+    rdfs:label "Ordinationsdatum"@de ;
+    rdfs:label "ordináció ideje"@hu .
+
+hp:dateOfRetirement a rdf:Property ;
+    rdfs:label "Emeritierungsdatum"@de ;
+    rdfs:label "nyugalomba vonulás ideje"@hu .
+
+hp:dateOfDeath a rdf:Property ;
+    rdfs:label "Sterbedatum"@de ;
+    rdfs:label "halál ideje"@hu .
+
+hp:dayOfFuneral a rdf:Property ;
+    rdfs:label "Begräbnistag"@de .
+
+hp:ordinator a rdf:Property ;
+    rdfs:label "Ordinator"@de ;
+    rdfs:comment "The person who did the ordination of the new pastor" .
+
+hp:nameOfPlace a rdf:Property ;
+    rdfs:subPropertyOf rdfs:label ;
+    rdfs:label "Ortsname"@de .
+
+hp:geographicalLocation a rdf:Property ;
+    rdfs:label "geographische Lage"@de , "geographical Location"@en ;
+    rdfs:comment "The geographical location of a place related to some other place. This can be used for denoting the location of historic villages where exact position information are not known but a relation to some well known place exists. E.g. “North of Leipzig”."@en .
+
+hp:country a rdf:Property ;
+    rdfs:label "Land"@de , "Country"@en .
+
+hp:currentName rdfs:sublPropertyOf skos:altLabel .
+
+hp:currentDistrict rdfs:sublPropertyOf skos:altLabel .
+
+hp:komitat1913 a rdf:Property ;
+    rdfs:label "Komitat 1913"@de .
+
+hp:germanName rdfs:sublPropertyOf skos:altLabel .
+
+hp:district a rdf:Property ;
+    rdfs:label "Kreis"@de .
+
+hp:district1952 a rdf:Property ;
+    rdfs:label "Kreis (1952)"@de .
+
+hp:ah1875 a rdf:Property ;
+    rdfs:label "AH (1875)"@de .
+
+hp:nearby a rdf:Property ;
+    rdfs:label "Lage"@de .
+
+hp:community a rdf:Property ;
+    rdfs:label "Verfassung"@de .
+
+hp:hovID a rdf:Property ;
+    rdfs:label "Historisches Ortsregister"@de .
+
+hp:nameOfSchool a rdf:Property ;
+    rdfs:label "Schulname"@de .
+
+hp:graduation a rdf:Property ;
+    rdfs:label "Abschluss"@de .
+
+rdfs:comment a rdf:Property ;
+    rdfs:label "Bemerkung"@de ;
+    rdfs:label "megjegyzések"@hu .
+
+hp:editorsComment a rdf:Property ;
+    rdfs:label "Bearbeitungs Kommentar"@de .
+
+hp:source a rdf:Property ;
+    rdfs:comment "The described resource may be derived from the related resource in whole or in part." ;
+    skos:note "In contrast to dc:source resp. dct:source this term is intended to be used with literal values." ;
+    rdfs:label "Quellen und Literatur"@de .
+
+hp:start a rdf:Property ;
+    rdfs:label "Begin"@de ;
+    rdfs:label "kezdete"@hu .
+
+hp:end a rdf:Property ;
+    rdfs:label "Ende"@de ;
+    rdfs:label "vége"@hu .
+
+hp:child a rdf:Property ;
+    rdfs:label "Kind"@de .
+
+hp:hasPosition a rdf:Property ;
+    rdfs:label "Pfarrstelle(n)"@de ;
+    rdfs:label "lelkészi állás"@hu .
+
+hp:attendedSchool a rdf:Property ;
+    rdfs:label "besuchte Schule(n)"@de .
+

@@ -1,0 +1,16 @@
+title: "Vocabulary for Historical Persons"
+baseurl: "/voc/hp"
+url: "http://purl.org"
+
+# Build settings
+markdown: kramdown
+theme: jekyll-theme-jod
+
+exclude: ["docs", "Gemfile", "Gemfile.lock", "*.graphml"]
+
+jekyll_rdf:
+    path: "schema.ttl"
+    include_blank: false
+    restriction: "SELECT ?resourceUri WHERE { ?resourceUri ?p ?o . FILTER regex(str(?resourceUri), \"http://purl.org/voc/hp/\") }"
+    class_template_mappings:
+      "http://www.w3.org/2002/07/owl#Ontology": "ontology.html"
